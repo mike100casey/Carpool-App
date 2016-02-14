@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+<head>
+    <title>Todo App</title>
+    <link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/datepicker.css">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap-timepicker.min.css">
+
+     <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+<body>
+
+<div ui-view="navbar" ng-cloak=""></div>
+<div class="container">
+    <div class="" ui-view="content"></div>
+
+    <div class="footer">
+        <p translate="footer">This is your footer</p>
+    </div>
+</div>
+<!-- bring in the google maps library-->
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false&callback" async defer></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script src="/lib/bootstrap/dist/js/bootstrap-datepicker.js"></script>
+<script src="/lib/bootstrap/dist/js/bootstrap-timepicker.js"></script>
+
+
+<script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+<script type="text/javascript" src="/lib/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<script type="text/javascript" src="/js/app.js"></script>
+<script type="text/javascript" src="/js/factory.js"></script>
+<script type="text/javascript" src="/js/myFactory.js"></script>
+<script type="text/javascript" src="/js/utils/directive.js"></script>
+<script type="text/javascript" src="/js/utils/ngAutocomplete.js"></script>
+<script type="text/javascript" src="/js/controllers.js"></script>
+<script src="/js/navbar/navbar.directive.js"></script>
+<script src="/js/navbar/navbar.controller.js"></script>
+<script src="/js/findPassengers/findPassengerRequests.js"></script>
+<script src="/js/findPassengers/FindRequestController.js"></script>
+<script src="/js/home/main.js"></script>
+<script src="/js/home/main.controller.js"></script>
+<script src="/js/addPassengerJourney/map.controller.js"></script>
+<script src="/js/addPassengerJourney/map.js"></script>
+
+<!-- Live reload script ../../client/ -->
+<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+</body>
+</html>

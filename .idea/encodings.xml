@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/bower_components" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/assets/main.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/components/navbar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/js/addPassengerJourney/map.controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/js/addPassengerJourney/map.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/js/findPassengers/FindRequestController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/js/findPassengers/findPassengerRequests.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/js/home/main.controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/js/home/main.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/js/navbar/navbar.controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/js/navbar/navbar.directive.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/js/utils/directive.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/js/utils/directive.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/js/utils/ngAutocomplete.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/js/utils/ngAutocomplete.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/lib/bootstrap/dist/css/bootstrap-timepicker.min.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/lib/bootstrap/dist/css/bootstrap-timepicker.min.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/lib/bootstrap/dist/css/datepicker.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/lib/bootstrap/dist/css/datepicker.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/lib/bootstrap/dist/js/bootstrap-datepicker.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/lib/bootstrap/dist/js/bootstrap-datepicker.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/lib/bootstrap/dist/js/bootstrap-timepicker.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/lib/bootstrap/dist/js/bootstrap-timepicker.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/partials/addPassengerJourney/map.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/partials/findPassengers/PassengerRequest.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/partials/home/main.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client/partials/navbar/navbar.html" charset="UTF-8" />
+  </component>
+</project>
