@@ -1,6 +1,10 @@
 angular.module('todoApp')
-    .controller('MapController', function ($scope,$log,$rootScope, $scope, journeyFactory) {
+    .controller('MapController', function ($scope, $log, $rootScope, journeyFactory) {
 
+        $("#myDate").datepicker({});
+        $('#timepicker').timepicker({});
+
+        $scope.journey = {};
         $scope.calcRoute = function () {
             var MyDirectionsDisplay = new google.maps.DirectionsRenderer({'map': map, 'draggable': true});
             var start = angular.element('#source').val();
@@ -31,32 +35,30 @@ angular.module('todoApp')
                         distance += response.routes[0].legs[i].distance.value / 1000;
                     }
                     var dist = Math.round(distance * 100) / 100 + " KM";
-                    document.getElementById('distanceLabel').innerHTML = "Travel Distance: " + dist;
+                    document.getElementById('distanceLabel').innerHTML = dist;
                 }
             });
         };
+        var isJourneyPosted = false;
 
-        $scope.journey = {};
-        $scope.journey.source = "";
-        $scope.journey.destination = "";
-
-        $scope.display = function () {
-            $log.log(JSON.stringify($scope.journey));
-        };
-        $("#myDate").datepicker({});
-        $('#timepicker').timepicker({});
-
-        $scope.todos = [];
+        $scope.passengerJourneys = [];
         // Save a Todo to the server
-        $scope.save = function($event) {
-            if ($event.which == 13 && $scope.todoInput) {
+        $scope.save = function ($event) {
+            if ($event.which == 13 && $scope.source && $scope.destination && $scope.date && $scope.time) {
                 journeyFactory.saveTodo({
-                    "source": $scope.todoInput
-                }).then(function(data) {
-                    $scope.todos.push(data.data);
+                    "source": $scope.source,
+                    "destination": $scope.destination,
+                    "date": $scope.date,
+                    "time": $scope.time,
+                    "distance": document.getElementById('distanceLabel').innerHTML
+                }).then(function (data) {
+                    $scope.passengerJourneys.push(data.data);
                 });
-                $scope.source = '';
             }
         };
+
+
+
+
 
     });

@@ -1,0 +1,70 @@
+<div ng-hide="success">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h1>Registration Details</h1>
+        </div>
+        <div class="alert alert-danger" ng-show="authenticationError">
+            <strong>Failed!</strong> Username already in use try again.
+        </div>
+
+        <div class="col-md-8 col-md-offset-2" ng-show="!success">
+            <label>User Type</label><br>
+            <div id="radioBtn" class="">
+                <a class="btn btn-primary btn-sm active" name="optradio" data-toggle="user" data-title="driver"
+                   ng-click="isDriver = true; userType = 'driver'" checked>Driver</a>
+                <a class="btn btn-primary btn-sm notActive" name="optradio" data-toggle="user" data-title="passenger"
+                   ng-click="isDriver = false; userType = 'passenger'">Passenger</a>
+            </div>
+            <br>
+        </div>
+
+        <div class="col-md-8 col-md-offset-2">
+            <form role='form'>
+                <label>Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Your username" ng-model="username"
+                       required>
+                    <label>Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="New password" ng-model="password"
+                            ng-click="findOne()" required>
+
+            </form>
+        </div>
+
+
+        <div class="col-md-8 col-md-offset-2" ng-switch="isDriver" ng-show="!success">
+            <h2 ng-switch-when="true" class="">Car Details</h2>
+            <div class="row" ng-switch-when="true">
+                <div class="col-sm-5">
+                    <label>Make</label>
+                    <select class="form-control" name="make" ng-model="make" ng-minlength=1 required >
+                        <option value="" disabled selected>Select make</option>
+                        <option ng-repeat="make in makes" value="{{make._id}}">{{make.make}}</option>
+                    </select>
+                </div>
+                <div class="col-sm-5">
+                    <label>Model</label>
+                    <select class="form-control" name="model" ng-model="car.model" ng-minlength=1 required>
+                        <option value="" disabled selected>Select model</option>
+                        <option ng-repeat="model in models" value="{{model.id}}">{{model.model}}</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <label>Year</label>
+                    <select class="form-control" name="model" ng-model="car.year" ng-minlength=1 required>
+                        <option value="" disabled selected>Year</option>
+                        <option ng-repeat="year in years" value="{{year}}">{{year}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8 col-md-offset-2"><br>
+            <button type="submit" class="btn btn-primary" ng-click="sendForm()">Register</button>
+        </div>
+
+    </div>
+</div>
+
+<div class="alert alert-success" role="alert" ng-show="success">
+    <p>User registered <a ui-sref="login" class="alert-link">GO to login page</a></p>
+</div>

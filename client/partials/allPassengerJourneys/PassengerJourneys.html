@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Passenger Journeys</div>
+    <div class="panel-body">
+        <p>The following is list of all journeys posted by potential passengers </p>
+    </div>
+
+    <!-- List group -->
+    <ul class="list-group" ng-class-odd="'odd'" ng-class-even="'even'">
+        <li class="list-group-item"  ng-repeat="pj in passengerJourneys" >
+            <label>{{pj.source}}</label> to
+            <label>{{pj.destination}}</label> on
+            <label>{{pj.date}}</label> at
+            <label>{{pj.time}}</label>. Travel Distance
+            <label>{{pj.distance}}</label>
+        </li>
+
+    </ul>
+</div>

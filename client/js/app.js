@@ -8,7 +8,7 @@ todoApp = angular.module('todoApp', ['ngRoute','ui.router','ngAutocomplete','tod
                 "navbar": { templateUrl: '/partials/navbar/navbar.html',controller: 'NavbarController'},
                 "content": { templateUrl: '/partials/todo.html',controller: 'TodoCtrl'}
             }
-        })
+        });
         //.state('route1', {
         //    url: "/route1",
         //    views: {

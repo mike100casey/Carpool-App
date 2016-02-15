@@ -4,7 +4,18 @@
     </div>
     <ul class="nav navbar-nav">
         <li><a ui-sref="home">Home</a></li>
-        <li ui-sref-active="active"><a ui-sref="passengerMap" data-toggle="collapse"><span class="glyphicon glyphicon-road"></span>&#xA0;<span>Passenger</span></a></li>
-        <li ui-sref-active="active"><a ui-sref="findPassengers"><span class="glyphicon glyphicon-search"></span>&#xA0;<span id="dropdownItem">Find Passengers</span></a></li>
+        <li ui-sref-active="active" ng-show="!loggedIn"><a ui-sref="login"><span class="glyphicon glyphicon-log-in"></span>&#xA0;<span>Login</span></a></li>
+        <li ui-sref-active="active" ng-show="!loggedIn"><a ui-sref="register"><span class="glyphicon glyphicon-plus-sign"></span>&#xA0;<span>Register</span></a></li>
+
+        <li ui-sref-active="active" ng-show="loggedIn"><a ui-sref="passengerMap" data-toggle="collapse"><span class="glyphicon glyphicon-road"></span>&#xA0;<span>Passenger</span></a></li>
+        <li ui-sref-active="active" ng-show="loggedIn"><a ui-sref="findPassengers"><span class="glyphicon glyphicon-search"></span>&#xA0;<span>Find Passengers</span></a></li>
+        <li ui-sref-active="active" ng-show="loggedIn"><a ui-sref="allPassengerJourneys"><span class="glyphicon glyphicon-search"></span>&#xA0;<span>Passenger Journeys</span></a></li>
     </ul>
+
+    <ul class="nav navbar-nav">
+        <li ui-sref-active="active" ng-show="loggedIn">{{name}}</li>
+        <li ui-sref-active="active" ng-show="loggedIn"><a ui-sref="login"><span class="glyphicon glyphicon-log-out"></span>&#xA0;<span>Log out</span></a></li>
+
+    </ul>
+
 </nav>
